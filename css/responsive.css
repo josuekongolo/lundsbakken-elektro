@@ -1,0 +1,333 @@
+/* ========================================
+   Lundsbakken Elektroservice - Responsive Styles
+   ======================================== */
+
+/* ========================================
+   Tablet Styles (768px and up)
+   ======================================== */
+@media (min-width: 768px) {
+    /* Typography */
+    h1 {
+        font-size: 3rem;
+    }
+
+    h2 {
+        font-size: 2.25rem;
+    }
+
+    /* Hero */
+    .hero {
+        padding: var(--spacing-2xl) 0 calc(var(--spacing-2xl) * 1.5);
+    }
+
+    .hero h1 {
+        font-size: 2.75rem;
+    }
+
+    .hero-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .hero-features {
+        grid-template-columns: repeat(4, auto);
+        justify-content: center;
+        gap: var(--spacing-lg);
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Benefits Grid */
+    .benefits-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Area Content */
+    .area-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: start;
+    }
+
+    /* Cabin Features */
+    .cabin-features {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* CTA Buttons */
+    .cta-buttons {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    /* Service Details */
+    .service-detail-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Cabin Services Grid */
+    .cabin-services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Areas Grid */
+    .areas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Contact Grid */
+    .contact-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* Form Row */
+    .form-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Footer Grid */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .footer-bottom {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+
+/* ========================================
+   Desktop Styles (1024px and up)
+   ======================================== */
+@media (min-width: 1024px) {
+    /* Header */
+    .nav-desktop {
+        display: block;
+    }
+
+    .header-cta {
+        display: block;
+    }
+
+    .menu-toggle {
+        display: none;
+    }
+
+    /* Hero */
+    .hero {
+        padding: calc(var(--spacing-2xl) * 1.5) 0 calc(var(--spacing-2xl) * 2);
+    }
+
+    .hero h1 {
+        font-size: 3.25rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.5rem;
+    }
+
+    /* Services Grid */
+    .services-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Cabin Features */
+    .cabin-features {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Cabin Services Grid */
+    .cabin-services-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Areas Grid */
+    .areas-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* Values Grid */
+    .values-grid {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* Footer Grid */
+    .footer-grid {
+        grid-template-columns: 2fr 1fr 1fr 1fr;
+    }
+}
+
+/* ========================================
+   Large Desktop Styles (1200px and up)
+   ======================================== */
+@media (min-width: 1200px) {
+    /* Container */
+    .container {
+        padding: 0 var(--spacing-lg);
+    }
+
+    /* Hero */
+    .hero h1 {
+        font-size: 3.5rem;
+    }
+}
+
+/* ========================================
+   Mobile Only Styles (below 768px)
+   ======================================== */
+@media (max-width: 767px) {
+    /* Quick Contact */
+    .quick-contact-inner {
+        flex-direction: column;
+        gap: var(--spacing-xs);
+        align-items: center;
+    }
+
+    /* Header */
+    .header-container {
+        position: relative;
+    }
+
+    /* Logo */
+    .logo-text {
+        display: none;
+    }
+
+    .logo-name-mobile {
+        display: block;
+        font-family: var(--font-heading);
+        font-size: 1rem;
+        font-weight: 700;
+    }
+
+    /* Service Card */
+    .service-card {
+        padding: var(--spacing-md);
+    }
+
+    .service-icon {
+        width: 56px;
+        height: 56px;
+    }
+
+    .service-icon svg {
+        width: 28px;
+        height: 28px;
+    }
+
+    /* Contact Form */
+    .form-submit .btn {
+        padding: 1rem;
+    }
+
+    /* Map */
+    .map-container {
+        height: 300px;
+    }
+}
+
+/* ========================================
+   Print Styles
+   ======================================== */
+@media print {
+    .header,
+    .quick-contact,
+    .menu-toggle,
+    .nav-mobile,
+    .hero-buttons,
+    .cta-section,
+    .footer {
+        display: none !important;
+    }
+
+    body {
+        font-size: 12pt;
+        line-height: 1.5;
+        color: #000;
+    }
+
+    .container {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    h1, h2, h3 {
+        page-break-after: avoid;
+    }
+
+    .section {
+        padding: 1rem 0;
+    }
+
+    a {
+        color: #000;
+        text-decoration: underline;
+    }
+
+    a[href^="tel:"]::after,
+    a[href^="mailto:"]::after {
+        content: " (" attr(href) ")";
+    }
+}
+
+/* ========================================
+   Reduced Motion
+   ======================================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* ========================================
+   High Contrast Mode
+   ======================================== */
+@media (prefers-contrast: high) {
+    :root {
+        --color-border: #000;
+    }
+
+    .btn {
+        border: 2px solid currentColor;
+    }
+
+    .service-card,
+    .benefit-item,
+    .value-card,
+    .contact-info-card,
+    .contact-form-card {
+        border: 2px solid var(--color-text);
+    }
+}
+
+/* ========================================
+   Dark Mode Support (Optional)
+   ======================================== */
+@media (prefers-color-scheme: dark) {
+    /* Note: Dark mode can be enabled by adding a .dark class to body
+       or by uncommenting these styles for automatic dark mode */
+    /*
+    :root {
+        --color-accent: #1a1a1a;
+        --color-light: #2a2a2a;
+        --color-text: #f0f0f0;
+        --color-text-light: #a0a0a0;
+        --color-border: #404040;
+    }
+    */
+}
